@@ -4,7 +4,7 @@ This project was created by Tobechukwu Obi and Monique Correa.
 
 ## Trello Board
 
-In the project directory, you can run:
+https://trello.com/b/xpj4UVr8/kanban-board
 
 ### `npm start`
 
