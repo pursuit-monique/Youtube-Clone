@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# Youtube Clone Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created by Tobechukwu Obi and Monique Correa.
 
-## Available Scripts
+## Trello Board
 
 In the project directory, you can run:
 
