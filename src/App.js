@@ -1,6 +1,11 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import { useEffect } from "react";
 import "./App.css";
+import { Router, Routes, Route } from "react-router-dom";
+// import Layout from "./Component/Layout";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import MainNavigation from "./Component/MainNavigation";
 
 function App() {
   useEffect(() => {
@@ -20,8 +25,22 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <Router>
+        <MainNavigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
+    </div>
+  );
+}
+
+export default App;
+
+// {
+/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -34,9 +53,5 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+      </header> */
+// }
