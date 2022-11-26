@@ -4,13 +4,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(8, 8, 8, 0);
-    padding: 0;
+    background-color: rgb(8, 8, 8);
+    padding-right: 8%;
 }
 
 .logo {
     font-size: 2rem;
-    color: #0000;
+    color: #e90c0c;
     font-weight: bold;
 }
 
@@ -21,10 +21,11 @@
     display: flex;
     align-items: center;
     justify-content:space-evenly;
+    padding-right: 20%;
 }
 
 .header li {
-    margin-left: 3rem;
+    margin-left: 2rem;
 }
 
 .header a {
