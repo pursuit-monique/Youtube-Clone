@@ -4,6 +4,9 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 import Error from '../error/Error.jsx'
@@ -17,15 +20,12 @@ export default function Videos(){
     const videos = useRef([])
     // const [cards, setCards] = useState([]);
     let videoList = [];
-    let errorList = [];
+
 
     function errorDisplay(error){
-        let errorList = [];
         setModalShow(true);
         // console.log(error.error.code, error.error.message);
         setVideos({code: error.error.code, message: error.error.message});
-        console.log(errorList);
-        return errorList;
     }
 
 
@@ -69,8 +69,10 @@ export default function Videos(){
     }
 
     return  ( <><>
-
-        <Form onSubmit={(event)=>getVideoQuery(event, videos)}>
+ <Container>
+      <Row>
+        <Col></Col>
+        <Col xs={6}><Form onSubmit={(event)=>getVideoQuery(event, videos)}>
                 <InputGroup className="mb-3">
                 <Form.Control 
                 type="text" 
@@ -83,7 +85,24 @@ export default function Videos(){
                 Search
                 </Button>
             </InputGroup>
-            </Form>
+            </Form></Col>
+        <Col></Col>
+      </Row>
+      <Row>
+        <Col></Col>
+        <Col xs={5}>            <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src="" />
+            <Card.Body>
+              <Card.Title>agai</Card.Title>
+              <Card.Text>
+                it blew up
+              </Card.Text>
+              <Button variant="danger">Watch!</Button>
+            </Card.Body>
+          </Card></Col>
+        <Col></Col>
+      </Row>
+    </Container>
             <Error show={modalShow} error={videosList} onHide={() => setModalShow(false)} />
     <><>
     {videoList ? videoList : 'undefined'}
