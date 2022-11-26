@@ -1,11 +1,12 @@
 .header {
     width: 100%;
-    height: 5rem;
+    height: 4.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(8, 8, 8);
+    background-color: #292b2c;
     padding-right: 8%;
+    margin-bottom: 2%;
 }
 
 .logo {

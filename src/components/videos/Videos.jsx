@@ -7,6 +7,8 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Alert from 'react-bootstrap/Alert';
+
 
 
 import Error from '../error/Error.jsx'
@@ -86,6 +88,15 @@ export default function Videos(){
                 </Button>
             </InputGroup>
             </Form></Col>
+        <Col></Col>
+      </Row>
+      <Row>
+        <Col></Col>
+        <Col xs={6}>      
+            <Alert variant="secondary" >
+            Please submit a search keyword and hit 'Submit'.
+            </Alert>
+         </Col>
         <Col></Col>
       </Row>
       <Row>
