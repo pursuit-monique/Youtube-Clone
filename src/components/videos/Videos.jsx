@@ -7,8 +7,12 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Alert from 'react-bootstrap/Alert';
+<<<<<<< HEAD
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+=======
+
+>>>>>>> 1390801 (Test Alert for Search and Cards Functionality)
 
 
 
@@ -133,8 +137,30 @@ export default function Videos(){
       </Row>
       <Row>
         <Col></Col>
+<<<<<<< HEAD
         <Col xs={5}>            
      </Col>
+=======
+        <Col xs={6}>      
+            <Alert variant="secondary" >
+            Please submit a search keyword and hit 'Submit'.
+            </Alert>
+         </Col>
+        <Col></Col>
+      </Row>
+      <Row>
+        <Col></Col>
+        <Col xs={5}>            <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src="" />
+            <Card.Body>
+              <Card.Title>agai</Card.Title>
+              <Card.Text>
+                it blew up
+              </Card.Text>
+              <Button variant="danger">Watch!</Button>
+            </Card.Body>
+          </Card></Col>
+>>>>>>> 1390801 (Test Alert for Search and Cards Functionality)
         <Col></Col>
       </Row>
       <Row>
