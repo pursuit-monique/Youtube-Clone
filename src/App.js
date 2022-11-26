@@ -1,36 +1,27 @@
-// import { useEffect, useState } from "react";
+
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Box } from '@mui/material';
+import {  About, NavBar } from './Components/Index';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Videos from "./components/videos/Videos";
 
 function App() {
-  // const [videos, setVideos] = useState("");
-
-  // useEffect(() => {
-  //   fetch(
-  //     `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`,
-  //     {
-  //       method: "GET",
-  //     }
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       setVideos(data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error:", error);
-  //     });
-  // }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Videos />
-      </header>
-    </div>
+    <Box sx={{ backgroundColor: '#0000' }}>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Videos />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
+    </Box>
   );
 }
 
 export default App;
+
+
