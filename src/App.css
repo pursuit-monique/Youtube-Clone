@@ -7,3 +7,16 @@ a:hover{
   color: #7d3532;
 }
 
+.panel-primary {
+  background: #d9534f;
+}
+
+.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #32c5d2;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #ffffff;
+  background-color: #29008a;
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
