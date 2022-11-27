@@ -21,57 +21,43 @@ export default function Videos(){
     const [userSearch, setUserSearch] = useState([]);
     const [videosList, setVideos] = useState([]);
     const videos = useRef([])
-    // const [cards, setCards] = useState([]);
-    const videoList = [];
     const {items} = dummySearch;
 
 
     function errorDisplay(error){
         setModalShow(true);
         setVideos({code: error.error.code, message: error.error.message});
+        setUserSearch('');
     }
 
 
     function getVideoQuery(event){
         event.preventDefault();
 
-            // fetch(
-            // //   `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${userSearch}&key=${process.env.REACT_APP_API_KEY}`,
-            // {dummySearch},
-            //   {
-            //     method: "GET",
-            //   }
-            // )
-        //       .then((response) => response.json())
-        //       .then((data) => {
-        //         if (videos.current.length > 0)  videos.current.length = 0;
-        //         !!data.items ? data.items.forEach((movie) => videos.current.push(movie)) : errorDisplay(data);
-        //         // if (data.items.length > 0) data.items.forEach((movie) => videos.current.push(movie))
-        //         console.log(data);
-        //       })
-        //       .catch((error) => {
-        //         console.error("Error:", error);
-        //       });
-        //       videoList = [...videos.current]
-        //       console.log(userSearch)
-        //  videoList.map((item) => {
-        //     return (
-        //     <>
-        //     <Card style={{ width: '18rem' }}>
-        //     <Card.Img variant="top" src={item.snippet.thumbnails.default} />
-        //     <Card.Body>
-        //       <Card.Title>{item.snippet.title}</Card.Title>
-        //       <Card.Text>
-        //         {item.snippet.description}
-        //       </Card.Text>
-        //       <Button variant="danger">Watch!</Button>
-        //     </Card.Body>
-        //   </Card>
-        //   </>) 
-        //   } 
-        //   )
+            fetch(
+                `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&q=${userSearch}&key=${process.env.REACT_APP_API_KEY}`,
+            {dummySearch},
+              {
+                method: "GET",
+              }
+            )
+              .then((response) => response.json())
+              .then((data) => {
+                if (videos.current.length > 0)  videos.current.length = 0;
+                !!data.items ? setVideos([...data.items]) : errorDisplay(data);
+                // if (data.items.length > 0) data.items.forEach((movie) => videos.current.push(movie))
+                console.log(data);
+                setUserSearch('');
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+              });
+
+              console.log(userSearch)
+
+          
         console.log(dummySearch);
-        setVideos([...dummySearch.items]);
+        ;
         console.log(videosList);
 
 
@@ -89,6 +75,7 @@ export default function Videos(){
                 <InputGroup className="mb-3">
                 <Form.Control 
                 type="text" 
+                value={userSearch}
                 onChange={(event) => {setUserSearch(event.target.value)}} 
                 placeholder="Search for videos"
                 aria-label="Search"
@@ -121,8 +108,8 @@ export default function Videos(){
       </Row>
     </Container>
     <Container fluid>
-      <Row className="justify-content-md-center">
-<VideoCards items={items} videosList={videosList} />
+      <Row className="justify-content-md-center g-5" xs={3} md={4}>
+<VideoCards videosList={videosList} />
     </Row>
   </Container>
             <Error show={modalShow} error={videosList} onHide={() => setModalShow(false)} />

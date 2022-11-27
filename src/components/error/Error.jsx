@@ -14,16 +14,24 @@ export default function Error(props) {
     }
     function linkParser(errormsg){
         if (errormsg){
-        let msg = errormsg.split('<a href="')[0];
-        let link = errormsg.split('<a href="')[1];
-        let link2 = link.split('">')[1].replace("</a>", "");
-        let link3 = `https://developers.google.com${link.split('">')[0]}`;
-        console.log(link3)
-        return (
-        <>
-            {msg} <a className={color} href={link3}>{link2}</a>
-        </>
-        )
+            if(errormsg.includes('<a href="')){
+            let msg = errormsg.split('<a href="')[0];
+            let link = errormsg.split('<a href="')[1];
+            let link2 = link.split('">')[1].replace("</a>", "");
+            let link3 = `https://developers.google.com${link.split('">')[0]}`;
+            console.log(link3)
+            return (
+            <>
+                {msg} <a className={color} href={link3}>{link2}</a>
+            </>
+            )
+            } else {
+                return (
+                    <>
+                    {errormsg}
+                    </>
+                )
+            }
         } else {
             return 'lol wut'
         }
