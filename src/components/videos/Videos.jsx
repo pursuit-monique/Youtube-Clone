@@ -62,8 +62,7 @@ export default function Videos(){
             )
               .then((response) => response.json())
               .then((data) => {
-                console.log(!!(data.items))
-                !!data.items ? setVideos([...data.items]) : errorDisplay(data);
+                data.items.length > 0 ? setVideos([...data.items]) : errorDisplay(data);
                 // console.log(data);
                 setUserSearch('');
               })
@@ -134,30 +133,8 @@ export default function Videos(){
       </Row>
       <Row>
         <Col></Col>
-<<<<<<< HEAD
         <Col xs={5}>            
      </Col>
-=======
-        <Col xs={6}>      
-            <Alert variant="secondary" >
-            Please submit a search keyword and hit 'Submit'.
-            </Alert>
-         </Col>
-        <Col></Col>
-      </Row>
-      <Row>
-        <Col></Col>
-        <Col xs={5}>            <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="" />
-            <Card.Body>
-              <Card.Title>agai</Card.Title>
-              <Card.Text>
-                it blew up
-              </Card.Text>
-              <Button variant="danger">Watch!</Button>
-            </Card.Body>
-          </Card></Col>
->>>>>>> f4ab4f4 (Test Alert for Search and Cards Functionality)
         <Col></Col>
       </Row>
       <Row>
