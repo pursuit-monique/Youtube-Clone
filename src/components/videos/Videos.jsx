@@ -26,7 +26,6 @@ export default function Videos(){
     const [error, setError] = useState(false);
     const [sort, setSort] = useState('Default');
     const {items} = dummySearch;
-    const [validated, setValidated] = useState(false);
 
     
     const baseurl = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=9';
@@ -63,7 +62,8 @@ export default function Videos(){
             )
               .then((response) => response.json())
               .then((data) => {
-                data.items.length > 0 ? setVideos([...data.items]) : errorDisplay(data);
+                console.log(!!(data.items))
+                data.items ? setVideos([...data.items]) : errorDisplay(data);
                 // console.log(data);
                 setUserSearch('');
               })
