@@ -1,3 +1,35 @@
+body {
+  padding-bottom: 5%;
+}
+
+.checkbox:checked{
+  background: #d9534f;
+  border: 1px solid #7d3532;
+}
+
+/* textarea:hover, 
+input:hover,  */
+/* textarea:active,  */
+/* input:active,  */
+/* textarea:focus,  */
+input:focus,
+button:focus
+/* button:active, */
+/* button:hover, */
+/* label:focus */
+{
+    outline:rgba(217, 83, 79, 0.5) solid 3px!important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+button:focus{
+  border: 1px solid #7d3532;
+}
+
+.dropdown-item:active{
+  background: #d9534f;
+}
 
 p a{
   color: #d9534f;
@@ -54,4 +86,9 @@ a {
   50% {
       color: #d9534f;
   }
+}
+
+#button-addon2{
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
 }

@@ -36,7 +36,7 @@ export default function VideoCards({videosList}){
         </Card.Footer>
           </Card></Col>
         )
-    }) : 'crap'}
+    }) : null}
     </>
     )
 }

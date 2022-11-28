@@ -12,6 +12,7 @@ export default function Error(props) {
     const color = {
         color: '#DC4C64'
     }
+    if (!error ) return null;
     function linkParser(errormsg){
         if (errormsg){
             if(errormsg.includes('<a href="')){

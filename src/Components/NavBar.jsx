@@ -1,8 +1,9 @@
 import React from "react";
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
-import "./NavBar.css"
+import "./NavBar.css";
 import { logo } from "../Utils/constants";
+import * as Icon from 'react-bootstrap-icons';
 
 const NavBar = () => {
   return (
@@ -14,17 +15,20 @@ const NavBar = () => {
         sx={{ position: 'sticky', background: '#0000', top: '0', justifyContent: 'space-between'}} 
       >
         <Link to="/" style={{ display: 'flex', alignItems: 'center', }}>
-          <img src={logo} alt="logo" height={45} />
+          {/* <img src={logo} alt="logo" height={45} /> */}
+          <Icon.Youtube style={{height: '65', width: 'auto'}} /> <span className="logo">Youtube</span>
         </Link>
       </Stack>
       <div className="logo">
-        Youtube
+        
       </div>
       <nav>
         <ul>
+          <li><Icon.HouseDoorFill style={{height: '30', width: 'auto', color: 'red', marginRight: '-25', marginBottom: '5'}} /></li>
           <li>
             <Link to="/">Home</Link>
           </li>
+          <li><Icon.PeopleFill style={{height: '30', width: 'auto', color: 'red', marginRight: '-25', marginBottom: '5'}} /></li>
           <li>
             <Link to="/about">About</Link>
           </li>
