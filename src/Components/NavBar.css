@@ -12,7 +12,8 @@
 
 .logo {
     font-size: 2rem;
-    color: #e90c0c;
+    padding-left: 8%;
+    color: whitesmoke;
     font-weight: bold;
 }
 
@@ -28,26 +29,55 @@
 
 .header li {
     margin-left: 2rem;
+    /* margin-top: 1rem; */
+
 }
 
 .header a {
     text-decoration: none;
     font-size: 1.5rem;
-    color: #e90c0c;
+    color: #e90c0c
 }
+
 .header a:hover {
     text-decoration: none;
-    animation-name: black-hyperlink;
+    animation-name: hyperlinkicon;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    color: #e90c0c;
+    color: whitesmoke;
   }
-  
-  @keyframes black-hyperlink {
+
+  @keyframes hyperlinkicon {
     0%, 100% {
         color: #e90c0c;
+        /* -webkit-text-stroke: 1px #e90c0c; */
     }
     50%, 80% {
-        color: white;
+        color: whitesmoke;
+        /* -webkit-text-stroke: 1px #e90c0c; */
+    }
+  }
+
+.header li a {
+    text-decoration: underline solid #e90c0c 1px;
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+.header li a:hover {
+    text-decoration: none;
+    animation-name: hyperlink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    color: whitesmoke;
+  }
+  
+  @keyframes hyperlink {
+    0%, 100% {
+        color: whitesmoke;
+        /* -webkit-text-stroke: 1px #e90c0c; */
+    }
+    50%, 80% {
+        color: #e90c0c;
+        /* -webkit-text-stroke: 1px #e90c0c; */
     }
   }
