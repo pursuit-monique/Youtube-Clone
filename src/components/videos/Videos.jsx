@@ -62,8 +62,7 @@ export default function Videos(){
             )
               .then((response) => response.json())
               .then((data) => {
-                console.log(!!(data.items))
-                !!data.items ? setVideos([...data.items]) : errorDisplay(data);
+                data.items.length > 0 ? setVideos([...data.items]) : errorDisplay(data);
                 // console.log(data);
                 setUserSearch('');
               })
