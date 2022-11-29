@@ -29,12 +29,12 @@ export default function Error(props) {
             } else {
                 return (
                     <>
-                    {errormsg}
+                        {errormsg}
                     </>
                 )
             }
         } else {
-            return 'lol wut'
+            return 'This is an error you should not be seeing. At all.'
         }
     }
     linkParser(error.message)

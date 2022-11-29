@@ -63,7 +63,7 @@ export default function Videos(){
               .then((response) => response.json())
               .then((data) => {
                 console.log(!!(data.items))
-                data.items ? setVideos([...data.items]) : errorDisplay(data);
+                !!data.items ? setVideos([...data.items]) : errorDisplay(data);
                 // console.log(data);
                 setUserSearch('');
               })
@@ -143,7 +143,7 @@ export default function Videos(){
       </Row>
     </Container>
     <Container fluid>
-      <Row className="justify-content-md-center g-5" xs={3} md={4}>
+      <Row className="container row-cols-xs-3 " >
 <VideoCards videosList={videosList} />
     </Row>
   </Container>
