@@ -24,11 +24,11 @@ const NavBar = () => {
       </div>
       <nav>
         <ul>
-          <li><Icon.HouseDoorFill style={{height: '30', width: 'auto', color: 'red', marginRight: '-25', marginBottom: '5'}} /></li>
+          <li><Icon.HouseDoorFill style={{height: '25', width: 'auto', color: 'red', marginRight: '-25', marginBottom: '5'}} /></li>
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li><Icon.PeopleFill style={{height: '30', width: 'auto', color: 'red', marginRight: '-25', marginBottom: '5'}} /></li>
+          <li><Icon.PeopleFill style={{height: '25', width: 'auto', color: 'red', marginRight: '-25', marginBottom: '5'}} /></li>
           <li>
             <Link to="/about">About</Link>
           </li>
