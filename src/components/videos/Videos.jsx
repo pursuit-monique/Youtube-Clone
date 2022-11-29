@@ -25,7 +25,7 @@ export default function Videos(){
     const [safeSearch, setSafeSearch] = useState(true);
     const [error, setError] = useState(false);
     const [sort, setSort] = useState('Default');
-    const {items} = dummySearch;
+    // const {items} = dummySearch;
 
     
     const baseurl = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=9';

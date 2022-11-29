@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Box } from "@mui/material";
-import { About, NavBar } from "./Components/Index";
+import { About, NavBar } from "./components/Index";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-import Videos from "./Components/videos/Videos";
-import Video from "./Components/videos/Video";
+import Videos from "./components/videos/Videos";
+import Video from "./components/videos/Video";
 
 function App() {
   return (
