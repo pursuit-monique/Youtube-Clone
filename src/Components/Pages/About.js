@@ -127,8 +127,11 @@ const About = () => {
         </Card>
       </CardGroup>
       <br />
+      <br />
       <div className="d-flex justify-content-center">
-        <Button variant="primary" href="/">Back to Home</Button>
+        <Button variant="primary" href="/">
+          Back to Home
+        </Button>
       </div>
     </div>
   );

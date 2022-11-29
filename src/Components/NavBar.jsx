@@ -2,7 +2,6 @@ import React from "react";
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-// import { logo } from "../Utils/constants";
 import * as Icon from 'react-bootstrap-icons';
 
 const NavBar = () => {
