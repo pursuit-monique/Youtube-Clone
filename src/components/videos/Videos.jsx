@@ -14,7 +14,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 
 import VideoCards from './VideoCards'
 import Error from '../error/Error.jsx';
-import dummySearch from '/Users/moniquecorrea/pursuit/module-3/youtube-clone/src/data/video.js';
+// import dummySearch from '/../../data/video.js';
 
 
 export default function Videos(){
@@ -25,7 +25,7 @@ export default function Videos(){
     const [safeSearch, setSafeSearch] = useState(true);
     const [error, setError] = useState(false);
     const [sort, setSort] = useState('Default');
-    const {items} = dummySearch;
+    // const {items} = dummySearch;
 
     
     const baseurl = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=9';
