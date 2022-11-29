@@ -6,7 +6,6 @@ import monique from "../Moprofile.jpg";
 import tobeobi from "../Toprofile.jpg";
 import "../About.css";
 
-
 const About = () => {
   return (
     <div className="about">
