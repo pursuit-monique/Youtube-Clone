@@ -51,8 +51,8 @@ export default function Videos(){
         event.preventDefault();
 
       
-            // console.log(urlGenerator(baseurl, userSearch, safeSearch, sort))
-            console.log(userSearch)
+            // //console.log(urlGenerator(baseurl, userSearch, safeSearch, sort))
+            //console.log(userSearch)
             if (userSearch.length < 1 ){ return null;}
             fetch(
                 `${urlGenerator(baseurl, userSearch, safeSearch, sort)}`,
@@ -63,23 +63,23 @@ export default function Videos(){
               .then((response) => response.json())
               .then((data) => {
                 data.items.length > 0 ? setVideos([...data.items]) : errorDisplay(data);
-                // console.log(data);
+                // //console.log(data);
                 setUserSearch('');
               })
               .catch((error) => {
                 console.error("Error:", error);
               });
 
-            //   console.log(userSearch)
+            //   //console.log(userSearch)
 
           
-        // console.log(dummySearch);
-        // console.log(videosList);
+        // //console.log(dummySearch);
+        // //console.log(videosList);
 
 
     }
-    // console.log(videosList);
-    // console.log(items)
+    // //console.log(videosList);
+    // //console.log(items)
 
     return  ( <><>
     

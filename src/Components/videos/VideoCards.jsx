@@ -9,8 +9,8 @@ export default function VideoCards({videosList}){
    <>
     {videosList.length > 0 ? videosList.map((video) =>{
         let url = `/video/${video.id.videoId}`
-        console.log(video)
-        return(<Col className="me-3">
+        //console.log(video)
+        return(<Col key={video.id.videoId} className="me-3">
             <Card border="light" style={{ width: '20rem' }}>
             <Card.Header className="cardheader">{video.snippet.channelTitle}</Card.Header>
             <Link to={url} className='black-hyperlink'><Card.Img className="cardimg" variant="top" src={video.snippet.thumbnails.high.url} /></Link>
@@ -19,16 +19,16 @@ export default function VideoCards({videosList}){
               <Card.Title>
                 <Link to={url} className='black-hyperlink'>{video.snippet.title.replace('&amp;', '&').replace('&#39;', "'")}</Link>
               </Card.Title>
-              <Card.Text>
+              {/* <Card.Text> */}
               <Accordion defaultActiveKey="1" flush>
       <Accordion.Item eventKey="0">
-        <Accordion.Header >Description</Accordion.Header>
+        <Accordion.Header>Description</Accordion.Header>
         <Accordion.Body>
         {video.snippet.description}
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
-              </Card.Text>
+              {/* </Card.Text> */}
               {/* <Button variant="danger">Watch!</Button> */}
             </Card.Body>
             <Card.Footer className='cardfooter'>

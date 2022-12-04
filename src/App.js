@@ -3,10 +3,11 @@ import { Box } from "@mui/material";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-import NavBar from "./components/NavBar";
-import About from "./components/pages/About";
-import Videos from "./components/videos/Videos";
-import Video from "./components/videos/Video";
+import NavBar from "./Components/NavBar";
+// import About from "./Components/Pages/About";
+import About from "./Components/pages/About";
+import Videos from "./Components/videos/Videos";
+import Video from "./Components/videos/Video";
 
 function App() {
   return (

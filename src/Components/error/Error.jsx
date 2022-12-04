@@ -7,7 +7,7 @@ import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 
 export default function Error(props) {
-    console.log({...props})
+    //console.log({...props})
     const {error} = props;
     const color = {
         color: '#DC4C64'
@@ -20,7 +20,7 @@ export default function Error(props) {
             let link = errormsg.split('<a href="')[1];
             let link2 = link.split('">')[1].replace("</a>", "");
             let link3 = `https://developers.google.com${link.split('">')[0]}`;
-            console.log(link3)
+            //console.log(link3)
             return (
             <>
                 {msg} <a className={color} href={link3}>{link2}</a>
