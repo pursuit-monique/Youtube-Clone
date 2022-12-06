@@ -10,8 +10,8 @@ export default function VideoCards({videosList}){
     {videosList.length > 0 ? videosList.map((video) =>{
         let url = `/video/${video.id.videoId}`
         //console.log(video)
-        return(<Col key={video.id.videoId} className="me-3">
-            <Card border="light" style={{ width: '20rem' }}>
+        return(<Col key={video.id.videoId} className="g-5">
+            <Card border="light" style={{ width: '18rem' }}>
             <Card.Header className="cardheader">{video.snippet.channelTitle}</Card.Header>
             <Link to={url} className='black-hyperlink'><Card.Img className="cardimg" variant="top" src={video.snippet.thumbnails.high.url} /></Link>
             {/* <Card.Header bg="danger">Header</Card.Header> */}

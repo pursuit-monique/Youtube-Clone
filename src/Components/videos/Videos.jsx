@@ -28,7 +28,7 @@ export default function Videos(){
     // const {items} = dummySearch;
 
     
-    const baseurl = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=9';
+    const baseurl = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=8';
 
 
     function errorDisplay(error){
@@ -142,7 +142,7 @@ export default function Videos(){
       </Row>
     </Container>
     <Container fluid>
-      <Row className="container row-cols-xs-3 " >
+      <Row className="align-items-center" >
 <VideoCards videosList={videosList} />
     </Row>
   </Container>
