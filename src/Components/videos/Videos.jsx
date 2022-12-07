@@ -62,7 +62,7 @@ export default function Videos(){
             )
               .then((response) => response.json())
               .then((data) => {
-                data.items.length > 0 ? setVideos([...data.items]) : errorDisplay(data);
+                data.items ? setVideos([...data.items]) : errorDisplay(data);
                 // //console.log(data);
                 setUserSearch('');
               })
@@ -122,10 +122,10 @@ export default function Videos(){
             </Form></Col>
         <Col></Col>
       </Row>
-      <Row className="mb-3">
+      <Row className="mb-3 g-5">
         <Col></Col>
-        <Col xs={4}>      
-           {videosList.length === 0 ?  <Alert variant="secondary" className="text-center">
+        <Col className="mb-3 g-5">     
+           {videosList.length === 0 ?  <Alert variant="secondary" className="text-center g-8">
             Please submit a search keyword and hit 'Submit'.
             </Alert> : null}
          </Col>
